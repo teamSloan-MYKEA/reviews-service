@@ -34,3 +34,4 @@ var save = (reviews) => {
 }
 
 module.exports.Review = Review;
+module.exports.save = save;
