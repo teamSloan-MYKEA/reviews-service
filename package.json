@@ -1,17 +1,27 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "reviews-service",
+  "description": "> Project description",
   "author": "",
-  "license": "",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
+    "express": "^4.17.1",
+    "webpack": "^4.44.1"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrr47-fec-omalley/reviews-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hrr47-fec-omalley/reviews-service/issues"
+  },
+  "homepage": "https://github.com/hrr47-fec-omalley/reviews-service#readme"
 }
