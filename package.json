@@ -9,6 +9,7 @@
   "scripts": {},
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.9.27",
     "webpack": "^4.44.1"
   },
   "devDependencies": {
