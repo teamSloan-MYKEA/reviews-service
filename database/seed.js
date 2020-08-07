@@ -25,10 +25,6 @@ var fakeReviews = [...Array(NREVIEWS).keys()].map(() => {
   return generateFakeReview();
 });
 
-console.log(fakeReviews);
-
-// Load Database
-
 Promise.all(db.save(fakeReviews))
   .then((doc) => {
     console.log('Success!');
