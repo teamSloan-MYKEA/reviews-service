@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var db = require('../database');
 var app = express();
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/../public'));
 app.use(bodyParser.json());
 var port = 8888;
 
