@@ -62,7 +62,7 @@ class Summary extends React.Component {
       <div>
         <div id="overview">
           <h2>{(Math.round(this.stats.avgs.stars * 10) / 10).toFixed(1)}</h2>
-          <div>starbar</div>
+          <div>starbar ({this.stats.n})</div>
         </div>
         <button id="writeReview">Write a Review</button>
         <Snapshot n={this.stats.n} starHist={this.stats.starHist}/>
