@@ -1,5 +1,6 @@
 import React from 'react';
 import Snapshot from './Snapshot.jsx';
+import StarBar from './StarBar.jsx';
 
 class Summary extends React.Component {
   constructor(props) {
@@ -66,7 +67,9 @@ class Summary extends React.Component {
         </div>
         <button id="writeReview">Write a Review</button>
         <Snapshot n={this.stats.n} starHist={this.stats.starHist}/>
-        <div>Averages</div>
+        <div>
+          <StarBar pct={72}/>
+        </div>
         <div>Most Helpful</div>
       </div>
     );
