@@ -14,10 +14,19 @@ var Fill = styled.div`
   background-color: black;
 `
 
-var HistBar = (props) => (
-  <BarBorder>
-    <Fill pct={30}></Fill>
-  </BarBorder>
-);
+var StyledHistBar = styled.div`
+`
+
+var HistBar = (props) => {
+  var [rating, count] = props.pair;
+  var pct = Math.round((count / props.n) * 100);
+  return (
+    <StyledHistBar>
+      <BarBorder>
+        <Fill pct={pct}></Fill>
+      </BarBorder>
+    </StyledHistBar>
+  )
+};
 
 export default HistBar;

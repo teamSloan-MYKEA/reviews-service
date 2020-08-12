@@ -5,8 +5,8 @@ var Snapshot = (props) => (
   <div>
     <h3>Rating Snapshot</h3>
     <h3>select a row below to filter reviews.</h3>
-    {Object.keys(props.starHist).map((k, i) => {
-      return <HistBar key={i}/>
+    {Object.entries(props.starHist).map((p, i) => {
+      return <HistBar key={i} pair={p} n={props.n}/>
     })}
   </div>
 );

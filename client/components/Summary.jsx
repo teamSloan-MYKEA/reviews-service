@@ -64,7 +64,7 @@ class Summary extends React.Component {
           <div>starbar</div>
         </div>
         <button id="writeReview">Write a Review</button>
-        <Snapshot starHist={this.stats.starHist}/>
+        <Snapshot n={this.props.reviews.length} starHist={this.stats.starHist}/>
         <div>Averages</div>
         <div>Most Helpful</div>
       </div>
