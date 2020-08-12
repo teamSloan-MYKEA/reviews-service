@@ -24,7 +24,7 @@ class Summary extends React.Component {
 
     // Create star histogram
     var starHist = this.props.reviews.reduce((memo, r) => {
-      memo[r] = memo[r] + 1 || 1;
+      memo[r.stars] = memo[r.stars] + 1 || 1;
       return memo
     }, {});
     [1, 2, 3, 4, 5].forEach(i => starHist[i] = starHist[i] || 0);
@@ -56,6 +56,7 @@ class Summary extends React.Component {
 
   render() {
     this.getStats();
+    console.log(this.stats.starHist);
     return (
       <div>
         <div id="overview">
