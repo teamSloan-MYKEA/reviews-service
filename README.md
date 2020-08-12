@@ -2,18 +2,14 @@
 
 > Project description
 
+This is the reviews module for hrr47 team O'malley's FEC project. The project is a front-end clone of the IKEA website built using react.
+
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/hrr47-fec-omalley/main-title-pictures-service
+  - https://github.com/hrr47-fec-omalley/add-to-bag-service
+  - https://github.com/hrr47-fec-omalley/similar-products-service
 
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
 
 ## Usage
 
