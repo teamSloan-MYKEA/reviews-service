@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 var BarBorder = styled.div`
-  margin: 30px 10px;
+  margin: 10px 10px;
   height: 24px;
   width: 200px;
   border-style: solid;
