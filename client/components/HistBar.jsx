@@ -15,6 +15,9 @@ var Fill = styled.div`
 `
 
 var StyledHistBar = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `
 
 var HistBar = (props) => {
@@ -22,9 +25,11 @@ var HistBar = (props) => {
   var pct = Math.round((count / props.n) * 100);
   return (
     <StyledHistBar>
+      <p>{rating}&#9733;</p>
       <BarBorder>
         <Fill pct={pct}></Fill>
       </BarBorder>
+      <p>{count}</p>
     </StyledHistBar>
   )
 };
