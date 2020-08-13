@@ -19,6 +19,14 @@ var Styled = styled.div`
     margin-left: 10px;
     margin-top: 4px;
   }
+
+  #writeReview {
+    margin: 20px auto;
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    border-width: 0;
+  }
 `
 
 var Overview = (props) => {
