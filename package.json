@@ -9,13 +9,16 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "start": "nodemon server/index.js",
-    "seed": "node database/seed.js"
+    "seed": "node database/seed.js",
+    "test": "mocha"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "chai": "^4.2.0",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "jest": "^26.3.0",
+    "mocha": "^8.1.1",
     "mongoose": "^5.9.27",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

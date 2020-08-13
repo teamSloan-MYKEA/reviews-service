@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 var BarBorder = styled.div`
-  margin: 30px 10px;
-  height: 24px;
+  margin: 10px 10px;
+  height: 10px;
   width: 200px;
   border-style: solid;
   border-width: 1px;
@@ -14,10 +14,24 @@ var Fill = styled.div`
   background-color: black;
 `
 
-var HistBar = (props) => (
-  <BarBorder>
-    <Fill pct={30}></Fill>
-  </BarBorder>
-);
+var StyledHistBar = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+var HistBar = (props) => {
+  var [rating, count] = props.pair;
+  var pct = Math.round((count / props.n) * 100);
+  return (
+    <StyledHistBar>
+      <p>{rating}&#9733;</p>
+      <BarBorder>
+        <Fill pct={pct}></Fill>
+      </BarBorder>
+      <p>{count}</p>
+    </StyledHistBar>
+  )
+};
 
 export default HistBar;
