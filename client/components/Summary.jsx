@@ -2,6 +2,7 @@ import React from 'react';
 import Snapshot from './Snapshot.jsx';
 import StarBar from './StarBar.jsx';
 import TickBar from './TickBar.jsx'
+import LabelledBar from './LabelledBar.jsx';
 
 class Summary extends React.Component {
   constructor(props) {
@@ -69,8 +70,11 @@ class Summary extends React.Component {
         <button id="writeReview">Write a Review</button>
         <Snapshot n={this.stats.n} starHist={this.stats.starHist}/>
         <div>
-          <StarBar pct={72}/>
+          <StarBar score={4.3}/>
           <TickBar score={3.2}/>
+          <LabelledBar type={'star'} label={'test'} score={4.3}></LabelledBar>
+          <LabelledBar type={'tick'} label={'test'} score={4.3}></LabelledBar>
+          <LabelledBar type={'star'} label={'test'} score={4.3}></LabelledBar>
         </div>
         <div>Most Helpful</div>
       </div>

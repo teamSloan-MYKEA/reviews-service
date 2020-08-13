@@ -32,7 +32,6 @@ var SolidBar = (props) => (
   </BarBorder>
 );
 
-
 var TickBar = (props) => {
   var full = Math.floor(props.score);
   var partial = (props.score - full) * 100;

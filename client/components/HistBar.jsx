@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 var BarBorder = styled.div`
   margin: 10px 10px;
-  height: 10px;
-  width: 200px;
+  height: 8px;
+  width: 300px;
   border-style: solid;
   border-width: 1px;
+  border-color: lightgray;
+border-radius: 2px;
 `
 var Fill = styled.div`
   height: 100%;
@@ -19,6 +21,8 @@ var StyledHistBar = styled.div`
   flex-direction: row;
   align-items: center;
 `
+
+
 
 var HistBar = (props) => {
   var [rating, count] = props.pair;
