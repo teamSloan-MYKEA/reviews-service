@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 var BarBorder = styled.div`
   margin: 10px 10px;
-  height: 24px;
+  height: 10px;
   width: 200px;
   border-style: solid;
   border-width: 1px;
