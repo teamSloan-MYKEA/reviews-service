@@ -41,7 +41,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {console.log('rendered', this.state)}
         <h1>Reviews</h1>
         <Summary reviews={this.state.reviews}/>
         <div>ReviewList</div>
