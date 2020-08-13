@@ -1,6 +1,7 @@
 import React from 'react';
 import Snapshot from './Snapshot.jsx';
 import StarBar from './StarBar.jsx';
+import TickBar from './TickBar.jsx'
 
 class Summary extends React.Component {
   constructor(props) {
@@ -69,6 +70,7 @@ class Summary extends React.Component {
         <Snapshot n={this.stats.n} starHist={this.stats.starHist}/>
         <div>
           <StarBar pct={72}/>
+          <TickBar score={3.2}/>
         </div>
         <div>Most Helpful</div>
       </div>
