@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import LabelledBar from './LabelledBar.jsx';
 
 var Styled = styled.div`
+  margin: 40px 0;
 `
 
 var labelKey = {
@@ -18,7 +19,7 @@ var Averages = (props) => (
     <div className="header">Average Customer Ratings</div>
     <LabelledBar type={'star'} label='Overall' score={props.avgs.stars} />
     {Object.keys(props.avgs).filter(k => k !== 'stars').map(k => {
-      return <LabelledBar type={'tick'} label={labelKey[k]} score={props.avgs[k]} />
+      return <LabelledBar key={k} type={'tick'} label={labelKey[k]} score={props.avgs[k]} />
     })}
   </Styled>
 );

@@ -35,7 +35,6 @@ var Empty = styled.span`
 
 var StarBar = (props) => {
   var pct = (props.score / 5) * 100
-  console.log('pct', pct);
   return (
     <StarBarStyled>
       <Empty>

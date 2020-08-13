@@ -3,6 +3,7 @@ import HistBar from './HistBar.jsx';
 import styled from 'styled-components';
 
 var Styled = styled.div`
+  margin: 40px 0;
 `
 
 var Snapshot = (props) => (

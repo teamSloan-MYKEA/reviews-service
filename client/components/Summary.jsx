@@ -2,7 +2,12 @@ import React from 'react';
 import Snapshot from './Snapshot.jsx';
 import StarBar from './StarBar.jsx';
 import LabelledBar from './LabelledBar.jsx';
+import Overview from './Overview.jsx';
 import Averages from './Averages.jsx';
+import styled from 'styled-components';
+
+var StyledSummary = styled.div`
+`
 
 class Summary extends React.Component {
   constructor(props) {
@@ -62,16 +67,12 @@ class Summary extends React.Component {
   render() {
     this.getStats();
     return (
-      <div>
-        <div id="overview">
-          <h2>{(Math.round(this.stats.avgs.stars * 10) / 10).toFixed(1)}</h2>
-          <span><StarBar score={this.stats.avgs.stars}/>({this.stats.n})</span>
-        </div>
-        <button id="writeReview">Write a Review</button>
+      <StyledSummary>
+        <Overview stats={this.stats}/>
         <Snapshot n={this.stats.n} starHist={this.stats.starHist}/>
         <Averages avgs={this.stats.avgs} />
         <div>Most Helpful</div>
-      </div>
+      </StyledSummary>
     );
   }
 }
