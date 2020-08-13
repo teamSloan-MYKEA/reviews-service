@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import HistBar from './HistBar.jsx';
 
 var BarBorder = styled.div`
-  margin: 10px 10px;
-  height: 10px;
-  width: 38px;
-  border-style: solid;
-  border-width: 1px;
+  margin: 0;
+  padding: 0;
+  height: 8px;
+  width: 32px;
+  border-top: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
 `
 var Fill = styled.div`
   height: 100%;
@@ -17,11 +19,11 @@ var Fill = styled.div`
 var BarContainer = styled.div`
   margin: 10px 10px;
   height: 10px;
-  width: 198px;
+  width: 128;
   display: flex;
   flex-direction: row;
-  align-items: center
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
 `
 
 var SolidBar = (props) => (
@@ -40,12 +42,10 @@ var TickBar = (props) => {
       {[...Array(full).keys()].map(i => {
         return <SolidBar key={i} pct={100} />
       })}
-      {[...Array(partial).keys().map(i => {
-        return <SolidBar key={full} pct={partial} />
-      })]}
-      {[...Array(empty).keys().map(i => {
+      <SolidBar key={full} pct={partial} />
+      {[...Array(empty).keys()].map(i => {
         return <SolidBar key={full + i + 1} pct={0} />
-      })]}
+      })}
     </BarContainer>
   );
 }
