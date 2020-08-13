@@ -7,11 +7,14 @@ var WithLabels = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  width: 300px;
+  justify-content: flex-start;
+  width: 400px;
+  font-size: 14px;
   .label {
-    width: 100px;
-    justify-self: start;
+    width: 200px;
+  }
+  .score {
+    margin-left: auto;
   }
 `
 
@@ -19,9 +22,9 @@ var LabelledBar = (props) => {
   var Bar = props.type === 'star' ? StarBar : TickBar;
   return (
     <WithLabels>
-      <p className="label">{props.label}</p>
+      <div className="label">{props.label}</div>
       <Bar score={props.score}></Bar>
-      <p className="score">{props.score}</p>
+      <div className="score">{props.score}</div>
     </WithLabels>
   )
 }

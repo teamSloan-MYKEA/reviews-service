@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 var StarBarStyled = styled.div`
-  margin: 10px 10px;
+  margin: 5px 0;
   font-size: 18px;
-  height: 30px;
-  width: 125px;
+  height: 25px;
+  width: 90px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -35,6 +35,7 @@ var Empty = styled.span`
 
 var StarBar = (props) => {
   var pct = (props.score / 5) * 100
+  console.log('pct', pct);
   return (
     <StarBarStyled>
       <Empty>

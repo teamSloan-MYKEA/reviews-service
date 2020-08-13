@@ -1,8 +1,8 @@
 import React from 'react';
 import Snapshot from './Snapshot.jsx';
 import StarBar from './StarBar.jsx';
-import TickBar from './TickBar.jsx'
 import LabelledBar from './LabelledBar.jsx';
+import Averages from './Averages.jsx';
 
 class Summary extends React.Component {
   constructor(props) {
@@ -65,17 +65,11 @@ class Summary extends React.Component {
       <div>
         <div id="overview">
           <h2>{(Math.round(this.stats.avgs.stars * 10) / 10).toFixed(1)}</h2>
-          <div>starbar ({this.stats.n})</div>
+          <span><StarBar score={this.stats.avgs.stars}/>({this.stats.n})</span>
         </div>
         <button id="writeReview">Write a Review</button>
         <Snapshot n={this.stats.n} starHist={this.stats.starHist}/>
-        <div>
-          <StarBar score={4.3}/>
-          <TickBar score={3.2}/>
-          <LabelledBar type={'star'} label={'test'} score={4.3}></LabelledBar>
-          <LabelledBar type={'tick'} label={'test'} score={4.3}></LabelledBar>
-          <LabelledBar type={'star'} label={'test'} score={4.3}></LabelledBar>
-        </div>
+        <Averages avgs={this.stats.avgs} />
         <div>Most Helpful</div>
       </div>
     );

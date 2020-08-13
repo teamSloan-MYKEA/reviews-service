@@ -4,11 +4,11 @@ import styled from 'styled-components';
 var BarBorder = styled.div`
   margin: 10px 10px;
   height: 8px;
-  width: 300px;
+  width: 400px;
   border-style: solid;
   border-width: 1px;
   border-color: lightgray;
-border-radius: 2px;
+  border-radius: 2px;
 `
 var Fill = styled.div`
   height: 100%;
@@ -29,11 +29,11 @@ var HistBar = (props) => {
   var pct = Math.round((count / props.n) * 100);
   return (
     <StyledHistBar>
-      <p>{rating}&#9733;</p>
+      <div className="rating">{rating}&#9733;</div>
       <BarBorder>
         <Fill pct={pct}></Fill>
       </BarBorder>
-      <p>{count}</p>
+      <div className="count">{count}</div>
     </StyledHistBar>
   )
 };
