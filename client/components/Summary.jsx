@@ -1,10 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 import Snapshot from './Snapshot.jsx';
 import StarBar from './StarBar.jsx';
 import LabelledBar from './LabelledBar.jsx';
 import Overview from './Overview.jsx';
 import Averages from './Averages.jsx';
-import styled from 'styled-components';
+import MostHelpful from './MostHelpful.jsx';
 
 var StyledSummary = styled.div`
 `
@@ -50,6 +51,8 @@ class Summary extends React.Component {
       return memo;
     }, {});
 
+    mostHelpful.fav = mostHelpful.fav || mostHelpful.unfav // if data hasn't been fetched yet
+
     this.stats = {
       n: this.props.reviews.length,
       avgs: avgs,
@@ -71,7 +74,7 @@ class Summary extends React.Component {
         <Overview stats={this.stats}/>
         <Snapshot n={this.stats.n} starHist={this.stats.starHist}/>
         <Averages avgs={this.stats.avgs} />
-        <div>Most Helpful</div>
+        <MostHelpful mostHelpful={this.stats.mostHelpful} n={this.stats.n} />
       </StyledSummary>
     );
   }

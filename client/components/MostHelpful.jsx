@@ -1,5 +1,59 @@
 import React from 'react';
+import styled from 'styled-components';
+import StarBar from './StarBar.jsx';
 
-var MostHelpful = (props) => (
-  <div></div>
-);
+var Entry = styled.div`
+  width: 50%;
+  overflow: scroll;
+
+  #name-date {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #header {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  #body {
+  }
+`
+var Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  width: 500px;
+  height: 200px;
+`
+
+var MostHelpfulEntry = (props) => {
+  var type = props.review.stars > 3 ? 'Favorable' : 'Critical';
+  return (
+    <Entry>
+      <div id="review-type">Most Helpful {type} Review</div>
+      <StarBar score={props.review.stars} />
+      <div id="name-date">
+        <div id="name">{props.review.user} &middot; </div>
+        <div id="date">{props.review.date}</div>
+      </div>
+      <div id="header">{props.review.head}</div>
+      <div id="body">{props.review.body}</div>
+      <div id="helpful-rate">
+        {props.review.helpful} out of {props.n} people found this helpful
+      </div>
+    </Entry>
+  );
+}
+
+var MostHelpful = (props) => {
+  console.log('most helpful props', props);
+  return (
+    <Container>
+      <MostHelpfulEntry review={props.mostHelpful.fav} n={props.n}/>
+      <MostHelpfulEntry review={props.mostHelpful.unfav} n={props.n}/>
+    </Container>
+  );
+}
+
+export default MostHelpful;
