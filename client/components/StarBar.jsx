@@ -2,11 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 var StarBarStyled = styled.div`
-  margin: 10px;
-  font-size: 25px;
-  height: 30px;
-  width: 125px;
+  margin: 5px 0;
+  font-size: 18px;
+  height: 25px;
+  width: 90px;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `
 var Fill = styled.span`
   color: black;
@@ -31,12 +34,13 @@ var Empty = styled.span`
 `
 
 var StarBar = (props) => {
+  var pct = (props.score / 5) * 100
   return (
     <StarBarStyled>
       <Empty>
         &#9733;&#9733;&#9733;&#9733;&#9733;
       </Empty>
-      <Fill pct={props.pct}>
+      <Fill pct={pct}>
         &#9733;&#9733;&#9733;&#9733;&#9733;
       </Fill>
     </StarBarStyled>

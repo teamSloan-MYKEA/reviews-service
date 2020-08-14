@@ -1,6 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import Snapshot from './Snapshot.jsx';
 import StarBar from './StarBar.jsx';
+import LabelledBar from './LabelledBar.jsx';
+import Overview from './Overview.jsx';
+import Averages from './Averages.jsx';
+import MostHelpful from './MostHelpful.jsx';
+
+var StyledSummary = styled.div`
+`
 
 class Summary extends React.Component {
   constructor(props) {
@@ -43,6 +51,8 @@ class Summary extends React.Component {
       return memo;
     }, {});
 
+    mostHelpful.fav = mostHelpful.fav || mostHelpful.unfav // if data hasn't been fetched yet
+
     this.stats = {
       n: this.props.reviews.length,
       avgs: avgs,
@@ -60,18 +70,12 @@ class Summary extends React.Component {
   render() {
     this.getStats();
     return (
-      <div>
-        <div id="overview">
-          <h2>{(Math.round(this.stats.avgs.stars * 10) / 10).toFixed(1)}</h2>
-          <div>starbar ({this.stats.n})</div>
-        </div>
-        <button id="writeReview">Write a Review</button>
+      <StyledSummary>
+        <Overview stats={this.stats}/>
         <Snapshot n={this.stats.n} starHist={this.stats.starHist}/>
-        <div>
-          <StarBar pct={72}/>
-        </div>
-        <div>Most Helpful</div>
-      </div>
+        <Averages avgs={this.stats.avgs} />
+        <MostHelpful mostHelpful={this.stats.mostHelpful} n={this.stats.n} />
+      </StyledSummary>
     );
   }
 }

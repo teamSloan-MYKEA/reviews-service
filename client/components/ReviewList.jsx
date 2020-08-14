@@ -1,4 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
+import ReviewListEntry from './ReviewListEntry.jsx';
+
+var StyledReviewList = styled.div`
+  width: 450px;
+`
 
 class ReviewList extends React.Component {
   constructor(props) {
@@ -8,10 +14,11 @@ class ReviewList extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>Filtering</div>
-        <div>Feed</div>
-      </div>
+      <StyledReviewList>
+        {this.props.reviews.slice(0, 10).map((r, i) => {
+          return <ReviewListEntry key={i} review={r} />
+        })}
+      </StyledReviewList>
     );
   }
 }

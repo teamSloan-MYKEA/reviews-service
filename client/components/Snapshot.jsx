@@ -1,14 +1,19 @@
 import React from 'react';
 import HistBar from './HistBar.jsx';
+import styled from 'styled-components';
+
+var Styled = styled.div`
+  margin: 40px 0;
+`
 
 var Snapshot = (props) => (
-  <div>
-    <h3>Rating Snapshot</h3>
-    <h3>select a row below to filter reviews.</h3>
+  <Styled>
+    <div className="header">Rating Snapshot</div>
+    <div className="header">select a row below to filter reviews.</div>
     {Object.entries(props.starHist).reverse().map((p, i) => {
       return <HistBar key={i} pair={p} n={props.n}/>
     })}
-  </div>
+  </Styled>
 );
 
 export default Snapshot;
