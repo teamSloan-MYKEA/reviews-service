@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Summary from './components/Summary.jsx';
 import axios from 'axios';
+import Summary from './components/Summary.jsx';
+import ReviewList from './components/ReviewList.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -43,6 +44,7 @@ class App extends React.Component {
       <div>
         <h1>Reviews</h1>
         <Summary reviews={this.state.reviews}/>
+        <ReviewList reviews={this.state.reviews} />
       </div>
     );
   }

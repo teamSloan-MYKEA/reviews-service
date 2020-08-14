@@ -28,17 +28,11 @@ var Container = styled.div`
   height: 200px;
 `
 
-var parseDate = (date) => {
-  if (date === '') {
-    return date;
-  }
-  var parsed = new Date(date);
-  return parsed.toDateString();
-}
-
 var MostHelpfulEntry = (props) => {
   var type = props.review.stars > 3 ? 'Favorable' : 'Critical';
-  var date = parseDate(props.review.date);
+  var date = props.review.date === '' ?
+    '' :
+    new Date(props.review.date).toDateString();
   return (
     <Entry>
       <div id="review-type">Most Helpful {type} Review</div>
