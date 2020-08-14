@@ -43,7 +43,6 @@ class App extends React.Component {
       <div>
         <h1>Reviews</h1>
         <Summary reviews={this.state.reviews}/>
-        <div>ReviewList</div>
       </div>
     );
   }

@@ -4,7 +4,6 @@ import StarBar from './StarBar.jsx';
 
 var Entry = styled.div`
   width: 50%;
-  overflow: scroll;
 
   #name-date {
     display: flex;
@@ -17,25 +16,36 @@ var Entry = styled.div`
   }
 
   #body {
+    height: 100px;
+    overflow: scroll;
   }
 `
 var Container = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 12px;
-  width: 500px;
+  width: 450px;
   height: 200px;
 `
 
+var parseDate = (date) => {
+  if (date === '') {
+    return date;
+  }
+  var parsed = new Date(date);
+  return parsed.toDateString();
+}
+
 var MostHelpfulEntry = (props) => {
   var type = props.review.stars > 3 ? 'Favorable' : 'Critical';
+  var date = parseDate(props.review.date);
   return (
     <Entry>
       <div id="review-type">Most Helpful {type} Review</div>
       <StarBar score={props.review.stars} />
       <div id="name-date">
         <div id="name">{props.review.user} &middot; </div>
-        <div id="date">{props.review.date}</div>
+        <div id="date">{date}</div>
       </div>
       <div id="header">{props.review.head}</div>
       <div id="body">{props.review.body}</div>
@@ -47,7 +57,6 @@ var MostHelpfulEntry = (props) => {
 }
 
 var MostHelpful = (props) => {
-  console.log('most helpful props', props);
   return (
     <Container>
       <MostHelpfulEntry review={props.mostHelpful.fav} n={props.n}/>
