@@ -5,6 +5,7 @@ import TickBar from './TickBar.jsx';
 
 var Styled = styled.div`
   border-top: 2px dotted lightgray;
+  margin-top: 20px;
 
   #bar {
     width: 100%;

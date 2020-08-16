@@ -6,7 +6,7 @@ var BarBorder = styled.div`
   margin: 0;
   padding: 0;
   height: 8px;
-  width: 32px;
+  width: 100%;
   border-top: 1px solid lightgray;
   border-right: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
@@ -19,7 +19,7 @@ var Fill = styled.div`
 var BarContainer = styled.div`
   margin: 10px 10px;
   height: 10px;
-  width: 128;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -34,14 +34,16 @@ var SolidBar = (props) => (
 
 var TickBar = (props) => {
   var full = Math.floor(props.score);
-  var partial = (props.score - full) * 100;
+  var partial = props.score - full;
   var empty = 5 - Math.ceil(props.score);
   return (
     <BarContainer>
       {[...Array(full).keys()].map(i => {
         return <SolidBar key={i} pct={100} />
       })}
-      <SolidBar key={full} pct={partial} />
+      {[...Array(Math.ceil(partial)).keys()].map(i => {
+        return <SolidBar key={full} pct={partial * 100} />
+      })}
       {[...Array(empty).keys()].map(i => {
         return <SolidBar key={full + i + 1} pct={0} />
       })}
