@@ -7,8 +7,27 @@ var Styled = styled.div`
   border-top: 2px dotted lightgray;
   margin-top: 20px;
 
-  #bar {
-    width: 100%;
+  #score-name-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .starbar {
+    margin-right: 10px;
+  }
+
+  #dot {
+    margin: 0 10px;
+  }
+
+  #header {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  .recommend {
+    margin: 20px 0;
   }
 `
 
@@ -20,20 +39,37 @@ var labelKey = {
   'expected': 'Works as expected',
 }
 
+var Recommend = (props)  => {
+  if (props.stars > 2) {
+    return (
+      <div className="recommend">&#10003; <strong>Yes</strong>, I recommend this product.</div>
+    );
+  } else {
+    return (
+      <div className="recommend">&#10006; <strong>No</strong>, I do not recommend this product.</div>
+    );
+  }
+}
+
 var ReviewListEntry = (props) => {
   var date = props.review.date === '' ?
     '' :
     new Date(props.review.date).toDateString();
+
+  var recommend = props.review.stars > 2 ?
+    '&#9733; Yes, I recommend this product.' :
+    '&#10006; No, I do not recommend this product.';
   return (
     <Styled>
       <div id="score-name-date">
         <StarBar score={props.review.stars} />
         <div id="name">{props.review.user}</div>
-        <div id="date">{date}</div>
+        <div id="dot">&middot;</div>
+        <div id="date"><i>{date}</i></div>
       </div>
       <div id="header">{props.review.head}</div>
       <div id="body">{props.review.body}</div>
-      <div id="recommend">recommend</div>
+      <Recommend stars={props.review.stars} />
       <div id="scores">
         {Object.keys(labelKey).map((k, i) => {
           return (

@@ -17,7 +17,7 @@ var Fill = styled.div`
   background-color: black;
 `
 var BarContainer = styled.div`
-  margin: 10px 10px;
+  margin: 10px 0;
   height: 10px;
   width: 100%;
   display: flex;
@@ -37,7 +37,7 @@ var TickBar = (props) => {
   var partial = props.score - full;
   var empty = 5 - Math.ceil(props.score);
   return (
-    <BarContainer>
+    <BarContainer id="tickbar">
       {[...Array(full).keys()].map(i => {
         return <SolidBar key={i} pct={100} />
       })}

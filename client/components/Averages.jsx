@@ -4,6 +4,10 @@ import LabelledBar from './LabelledBar.jsx';
 
 var Styled = styled.div`
   margin: 40px 0;
+
+  #tickbar {
+    width: 140px;
+  }
 `
 
 var labelKey = {
