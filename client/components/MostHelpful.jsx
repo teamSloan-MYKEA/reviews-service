@@ -10,9 +10,15 @@ var Entry = styled.div`
     flex-direction: row;
   }
 
+  #review-type {
+    margin-bottom: 20px;
+  }
+
   #header {
     font-size: 16px;
     font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   #body {
@@ -25,7 +31,6 @@ var Container = styled.div`
   flex-direction: row;
   font-size: 12px;
   width: 450px;
-  height: 200px;
 `
 
 var MostHelpfulEntry = (props) => {

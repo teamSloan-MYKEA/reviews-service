@@ -8,6 +8,11 @@ import styled from 'styled-components';
 var Styled = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
   font-family: 'Noto Sans', sans-serif;
+  line-height: 1.5em;
+
+  h1 {
+    font-size: 22px;
+  }
 `
 
 class App extends React.Component {

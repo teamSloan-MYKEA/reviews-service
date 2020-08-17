@@ -7,6 +7,7 @@ var Styled = styled.div`
 
   #score {
     margin: 0;
+    font-size: 32px;
   }
 
   #stars {
