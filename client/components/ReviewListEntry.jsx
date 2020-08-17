@@ -22,8 +22,12 @@ var Styled = styled.div`
   }
 
   #header {
-    font-size: 22px;
+    font-size: 18px;
     margin: 10px 0;
+  }
+
+  #body {
+    font-size: 12px;
   }
 
   .recommend {

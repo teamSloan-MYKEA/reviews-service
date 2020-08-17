@@ -5,6 +5,12 @@ import StarBar from './StarBar.jsx';
 var Styled = styled.div`
   margin: 40px 0;
 
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
   #score {
     margin: 0;
     font-size: 32px;
@@ -33,6 +39,7 @@ var Styled = styled.div`
 var Overview = (props) => {
   return (
     <Styled>
+      <h1>Reviews</h1>
       <h2 id="score">{(Math.round(props.stats.avgs.stars * 10) / 10).toFixed(1)}</h2>
           <div id="stars">
             <StarBar score={props.stats.avgs.stars}/>

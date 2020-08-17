@@ -10,9 +10,10 @@ var Styled = styled.div`
   font-family: 'Noto Sans', sans-serif;
   line-height: 1.5em;
 
-  h1 {
-    font-size: 22px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
 `
 
 class App extends React.Component {
@@ -53,7 +54,6 @@ class App extends React.Component {
   render() {
     return (
       <Styled>
-        <h1>Reviews</h1>
         <Summary reviews={this.state.reviews}/>
         <ReviewList reviews={this.state.reviews} />
       </Styled>
