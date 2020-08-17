@@ -4,6 +4,11 @@ import LabelledBar from './LabelledBar.jsx';
 
 var Styled = styled.div`
   margin: 40px 0;
+  font-size: 12px;
+
+  .header {
+    margin-bottom: 20px;
+  }
 
   #tickbar {
     width: 140px;

@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 var StarBarStyled = styled.div`
   margin: 5px 0;
-  font-size: 18px;
+  font-size: 14px;
   height: 25px;
-  width: 90px;
+  width: 70px;
   position: relative;
   display: flex;
   flex-direction: row;

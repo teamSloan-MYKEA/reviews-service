@@ -5,6 +5,10 @@ import styled from 'styled-components';
 var Styled = styled.div`
   margin: 40px 0;
   font-size: 12px;
+
+  .header {
+    margin-bottom: 20px;
+  }
 `
 
 var Snapshot = (props) => (

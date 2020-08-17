@@ -28,7 +28,8 @@ var Styled = styled.div`
   }
 
   #writeReview {
-    margin: 20px auto;
+    font-weight: bold;
+    margin: 60px auto 10px auto;
     width: 400px;
     height: 40px;
     border-radius: 20px;

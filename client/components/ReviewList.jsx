@@ -4,6 +4,9 @@ import ReviewListEntry from './ReviewListEntry.jsx';
 
 var StyledReviewList = styled.div`
   width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 
   #page-nav {
     margin: 30px 0;
