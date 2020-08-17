@@ -13,7 +13,6 @@ var Modal = styled.div`
   z-index: 1;
   right: 0;
   top: 0;
-  margin-right: 20px;
   width: 500px;
   height: 100%;
   background-color: white;

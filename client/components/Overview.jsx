@@ -5,7 +5,6 @@ import StarBar from './StarBar.jsx';
 var Styled = styled.div`
   margin: 40px 0;
 
-
   h1 {
     font-size: 22px;
     margin-bottom: 30px;

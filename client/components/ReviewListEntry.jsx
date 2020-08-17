@@ -6,6 +6,7 @@ import TickBar from './TickBar.jsx';
 var Styled = styled.div`
   border-top: 2px dotted lightgray;
   margin-top: 20px;
+  font-size: 12px;
 
   #score-name-date {
     display: flex;
@@ -22,12 +23,8 @@ var Styled = styled.div`
   }
 
   #header {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-
-  #body {
-    font-size: 12px;
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 
   .recommend {
