@@ -6,7 +6,7 @@ var StyledReviewList = styled.div`
   width: 450px;
 
   #page-nav {
-    margin-top: 30px;
+    margin: 30px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
