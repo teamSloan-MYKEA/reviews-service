@@ -62,9 +62,10 @@ class Summary extends React.Component {
   }
 
   getAvg(key) {
-    return this.props.reviews.map(r => r[key]).reduce((memo, s) => {
+    var avg = this.props.reviews.map(r => r[key]).reduce((memo, s) => {
       return memo + s;
     }) / this.props.reviews.length;
+    return (Math.round(avg * 10) / 10).toFixed(1);
   }
 
   render() {

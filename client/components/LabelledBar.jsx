@@ -9,9 +9,9 @@ var WithLabels = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 400px;
-  font-size: 14px;
   .label {
     width: 200px;
+    margin-right: 5px;
   }
   .score {
     margin-left: auto;

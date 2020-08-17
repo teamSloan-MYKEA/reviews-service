@@ -4,7 +4,7 @@ import styled from 'styled-components';
 var BarBorder = styled.div`
   margin: 10px 10px;
   height: 8px;
-  width: 350px;
+  width: 375px;
   border-style: solid;
   border-width: 1px;
   border-color: lightgray;

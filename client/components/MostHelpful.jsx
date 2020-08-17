@@ -10,9 +10,14 @@ var Entry = styled.div`
     flex-direction: row;
   }
 
+  #review-type {
+    margin-bottom: 20px;
+  }
+
   #header {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   #body {
@@ -25,7 +30,6 @@ var Container = styled.div`
   flex-direction: row;
   font-size: 12px;
   width: 450px;
-  height: 200px;
 `
 
 var MostHelpfulEntry = (props) => {
@@ -38,8 +42,9 @@ var MostHelpfulEntry = (props) => {
       <div id="review-type">Most Helpful {type} Review</div>
       <StarBar score={props.review.stars} />
       <div id="name-date">
-        <div id="name">{props.review.user} &middot; </div>
-        <div id="date">{date}</div>
+        <div id="name">{props.review.user}</div>
+        <div>  &middot;  </div>
+        <div id="date"><i>{date}</i></div>
       </div>
       <div id="header">{props.review.head}</div>
       <div id="body">{props.review.body}</div>

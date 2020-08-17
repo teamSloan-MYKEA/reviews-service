@@ -8,18 +8,22 @@ var generateFakeReview = () => {
     date: faker.date.past(),
     head: faker.lorem.words(),
     body: faker.lorem.paragraphs(),
-    stars: Math.floor(Math.random() * 5) + 1,
-    value: Math.floor(Math.random() * 5) + 1,
-    quality: Math.floor(Math.random() * 5) + 1,
-    appearance: Math.floor(Math.random() * 5) + 1,
-    expected: Math.floor(Math.random() * 5) + 1,
-    ease: Math.floor(Math.random() * 5) + 1,
+    stars: randScore(),
+    value: randScore(),
+    quality: randScore(),
+    appearance: randScore(),
+    expected: randScore(),
+    ease: randScore(),
     helpful: Math.floor(Math.random() * 25),
     unhelpful: Math.floor(Math.random() * 25)
   };
+
   return review;
 };
 
+var randScore = () => {
+  return Math.floor(Math.random() * 5) + 1;
+}
 
 var fakeReviews = [...Array(NREVIEWS).keys()].map(() => {
   return generateFakeReview();
