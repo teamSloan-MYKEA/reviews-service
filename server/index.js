@@ -4,7 +4,7 @@ var db = require('../database');
 var app = express();
 app.use(express.static(__dirname + '/../public'));
 app.use(bodyParser.json());
-var port = 8888;
+var port = 3002;
 
 app.get('/reviews', (req, res) => {
   db.Review.find(req.query, (err, data) => {

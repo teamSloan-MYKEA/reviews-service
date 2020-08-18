@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/mykea');
+mongoose.connect('mongodb://localhost/mykea-reviews');
 
 var reviewSchema = new mongoose.Schema({
   user: String,

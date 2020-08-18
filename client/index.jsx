@@ -99,7 +99,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="reviews">
         <button id="open" onClick={this.open}>Reviews</button>
         <Modal id="modal">
           <Sticky>
