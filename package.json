@@ -7,8 +7,8 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "react-dev": "webpack -d --watch",
-    "start": "nodemon server/index.js",
+    "client": "webpack -d --watch",
+    "server": "nodemon server/index.js",
     "seed": "node database/seed.js",
     "test": "mocha"
   },
