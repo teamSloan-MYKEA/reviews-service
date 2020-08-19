@@ -75,8 +75,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/reviews')
+    console.log('review component mounted');
+    axios.get(`reviews${window.location.pathname}`)
       .then((res) => {
+        console.log('reviews res data', res.data);
         this.setState({
           reviews: res.data,
         });
