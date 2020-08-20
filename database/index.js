@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/mykea-reviews');
 
 var reviewSchema = new mongoose.Schema({
+  productId: Number,
   user: String,
   date: Date,
   head: String,

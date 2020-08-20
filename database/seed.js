@@ -1,9 +1,10 @@
 var db = require('../database');
 var faker = require('faker');
-var NREVIEWS = 100;
+var NPRODUCTS = 100;
 
-var generateFakeReview = () => {
+var generateFakeReview = (productId) => {
   var review = {
+    productId: productId,
     user: faker.internet.userName(),
     date: faker.date.past(),
     head: faker.lorem.words(),
@@ -23,10 +24,17 @@ var generateFakeReview = () => {
 
 var randScore = () => {
   return Math.floor(Math.random() * 5) + 1;
-}
+};
 
-var fakeReviews = [...Array(NREVIEWS).keys()].map(() => {
-  return generateFakeReview();
+var generateFakeProductReviews = (id) => {
+  var n = Math.floor(Math.random() * 100);
+  return [...Array(n).keys()].map(() => generateFakeReview(id));
+};
+
+fakeReviews = [];
+[...Array(NPRODUCTS).keys()].forEach((i) => {
+  var id = i + 1;
+  fakeReviews.push(...generateFakeProductReviews(id));
 });
 
 Promise.all(db.save(fakeReviews))
