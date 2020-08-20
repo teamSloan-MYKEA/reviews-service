@@ -11,6 +11,7 @@ var StyledButton = styled.button`
   height: 100px;
   background-color: white;
   border-width: 0;
+  padding: 0;
 
   #overview {
     display: flex;
