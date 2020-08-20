@@ -11,7 +11,6 @@ var StyledButton = styled.button`
   height: 100px;
   background-color: white;
   border-width: 0;
-  border-top: solid lightgray 1px;
 
   #overview {
     display: flex;
@@ -20,7 +19,8 @@ var StyledButton = styled.button`
   }
 
   #reviews {
-    font-size: 16px;
+    font-size: 25px;
+    font-weight: 700;
   }
 
   #bar-count {
@@ -39,7 +39,7 @@ var ReviewButton = (props) => {
   return (
     <StyledButton onClick={props.onClick}>
       <div id="overview">
-        <div id="reviews"><strong>Reviews</strong></div>
+        <div id="reviews">Reviews</div>
         <div id="bar-count">
           <StarBar id="bar" score={props.stats.avgs.stars}/>
           <div id="count">({props.stats.n})</div>
