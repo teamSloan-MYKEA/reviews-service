@@ -12,6 +12,7 @@ var StyledButton = styled.button`
   background-color: white;
   border-width: 0;
   padding: 0;
+  margin-bottom: 10px;
 
   #overview {
     display: flex;
@@ -19,7 +20,7 @@ var StyledButton = styled.button`
     align-items: flex-start;
   }
 
-  #reviews {
+  #reviews-the-word {
     font-size: 25px;
     font-weight: 700;
   }
@@ -40,7 +41,7 @@ var ReviewButton = (props) => {
   return (
     <StyledButton onClick={props.onClick}>
       <div id="overview">
-        <div id="reviews">Reviews</div>
+        <div id="reviews-the-word">Reviews</div>
         <div id="bar-count">
           <StarBar id="bar" score={props.stats.avgs.stars}/>
           <div id="count">({props.stats.n})</div>
