@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Summary from './components/Summary.jsx';
 import ReviewList from './components/ReviewList.jsx';
+import ReviewButton from './components/ReviewButton.jsx';
 import styled from 'styled-components';
 import stats from './stats.js';
 
@@ -105,7 +106,7 @@ class App extends React.Component {
     this.stats = stats.getStats(this.state.reviews);
     return (
       <div id="reviews">
-        <button id="open" onClick={this.open}>Reviews</button>
+        <ReviewButton id="open" onClick={this.open} stats={this.stats} />
         <Modal id="modal">
           <Sticky>
             <button id="close" onClick={this.close}>&#10005;</button>
