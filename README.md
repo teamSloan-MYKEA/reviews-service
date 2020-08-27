@@ -33,3 +33,16 @@ npm install -g webpack
 npm install
 ```
 
+## Endpoints
+
+### GET - /:id/reviews/:id
+Returns selected set of reviews from database
+
+### POST - /:id/reviews/:id
+Posts a review to selected product
+
+### PUT - /:id/reviews/:id
+Edits a review at particular id
+
+### DELETE - /:id/reviews/:id
+Removes selected review from database
