@@ -1,4 +1,4 @@
-const { Client } = require('pg')
+const { Client } = require('pg');
 const path = require('path');
 
 const client = new Client({
@@ -30,7 +30,7 @@ CREATE TABLE reviews (
 );
 `;
 
-const vacuumer = `VACUUM (ANALYZE) reviews`;
+const vacuumer = 'VACUUM (ANALYZE) reviews';
 
 client
   .query(schema)
@@ -39,7 +39,7 @@ client
   })
   .catch(err => {
     console.log(err);
-  })
+  });
 
 client
   .query(vacuumer)
@@ -51,4 +51,4 @@ client
   })
   .finally(() => {
     client.end;
-  })
+  });

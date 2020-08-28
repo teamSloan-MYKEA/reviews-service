@@ -56,7 +56,7 @@ app.post('/:id/reviews/:id', (req, res) => {
 app.put('/:id/reviews/:id', (req, res) => {
   const id = path.basename(req.originalUrl);
   var query = {user: req.body.user};
-  db.Review.findByIdAndUpdate("5f4698c007f6e74f7506314b", query, (err, data) => {
+  db.Review.findByIdAndUpdate('5f4698c007f6e74f7506314b', query, (err, data) => {
     if (err) {
       throw err;
       res.status(500).send('db error');
@@ -68,7 +68,7 @@ app.put('/:id/reviews/:id', (req, res) => {
 
 app.delete('/:id/reviews/:id', (req, res) => {
   const id = path.basename(req.originalUrl);
-  db.Review.findByIdAndDelete("5f4698c007f6e74f7506314b", (err, data) => {
+  db.Review.findByIdAndDelete('5f4698c007f6e74f7506314b', (err, data) => {
     if (err) {
       throw err;
       res.status(500).send('db error');
@@ -82,4 +82,4 @@ app.delete('/:id/reviews/:id', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
-})
+});

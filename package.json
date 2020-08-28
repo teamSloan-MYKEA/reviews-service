@@ -21,6 +21,7 @@
     "jest": "^26.3.0",
     "mocha": "^8.1.1",
     "mongoose": "^5.9.27",
+    "pg-promise": "^10.6.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1"
