@@ -24,3 +24,8 @@ coverage
 build/
 dist/
 public/bundle.js
+
+
+# Data #
+
+database/csv-generator/records.csv

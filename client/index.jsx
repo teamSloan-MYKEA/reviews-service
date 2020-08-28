@@ -70,8 +70,7 @@ class App extends React.Component {
           unhelpful: 0
         }
       ]
-    }
-
+    };
     this.stats = {};
     this.open = this.open.bind(this);
     this.close = this.close.bind(this);
