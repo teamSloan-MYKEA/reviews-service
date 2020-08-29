@@ -11,7 +11,7 @@ const db = pgp({
   password: 'postgres',
   host: 'localhost',
   database: 'sdc',
-  port: 5432,
+  port: 5433,
 });
 
 const cs = new pgp.helpers.ColumnSet([
