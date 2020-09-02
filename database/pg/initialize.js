@@ -3,7 +3,7 @@ const path = require('path');
 
 const client = new Client({
   user: 'postgres',
-  password: 'postgres',
+  password: 'password',
   host: 'localhost',
   database: 'sdc',
   port: 5433,
@@ -24,7 +24,7 @@ const vacuumer = 'VACUUM (ANALYZE) reviews';
 client
   .query(schema)
   .then(res => {
-    console.log('Table is successful');
+    console.log('schema is successful');
   })
   .catch(err => {
     console.log(err);
