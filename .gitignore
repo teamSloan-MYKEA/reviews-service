@@ -32,3 +32,4 @@ records.csv
 twoColumnRecords.csv
 database/pg/pg_data
 database/cassandra/cassandra_data
+newrelic.js
