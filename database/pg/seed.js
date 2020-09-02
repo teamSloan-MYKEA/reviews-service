@@ -25,10 +25,10 @@ var randScore = () => {
 
 function getNextData (t, pageIndex) {
   let data = null;
-  if (pageIndex < 1000) {
+  if (pageIndex < 10000) {
     data = [];
-    for (let i = 0; i < 100; i++) {
-      const idx = pageIndex * 100 + i;
+    for (let i = 0; i < 1000; i++) {
+      const idx = pageIndex * 1000 + i;
       let obj = {
         productid: idx,
       };
