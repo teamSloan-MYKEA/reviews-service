@@ -28,5 +28,7 @@ public/bundle.js
 
 # Data #
 
-database/csv-generator/records.csv
+records.csv
+twoColumnRecords.csv
 database/pg/pg_data
+database/cassandra/cassandra_data
