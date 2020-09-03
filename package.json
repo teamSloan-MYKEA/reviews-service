@@ -8,8 +8,8 @@
   },
   "scripts": {
     "client": "webpack -d --watch",
-    "server": "nodemon server/index.js",
-    "seed": "node database/seed.js",
+    "dcserver": "nodemon server/dc-index.js",
+    "mcserver": "nodemon server/mc-index.js",
     "test": "mocha"
   },
   "dependencies": {

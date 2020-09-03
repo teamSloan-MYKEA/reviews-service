@@ -9,7 +9,8 @@ const client = new Client({
   port: 5433,
 });
 
-client.connect();
+client.connect()
+  .catch((err) => console.log(err));
 
 const schema = `
 DROP TABLE IF EXISTS reviews;
