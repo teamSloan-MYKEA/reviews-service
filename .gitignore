@@ -28,8 +28,9 @@ public/bundle.js
 
 # Data #
 
-records.csv
-twoColumnRecords.csv
-database/pg/pg_data
+database/pg/pg_data_dc
+database/pg/pg_data_mc
 database/cassandra/cassandra_data
+
+# Keys #
 newrelic.js
