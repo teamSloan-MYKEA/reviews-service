@@ -17,8 +17,17 @@ const getReviewByIdMC = (id) => {
     const qs = `SELECT * from reviews WHERE uniqueid>=${id * 10} AND uniqueid<${id * 10 + 10}`;
     client.query(qs)
       .then(data => resolve(data.rows))
-      .catch(err => { reject(err); } );
+      .catch(err => reject(err));
   });
 };
 
-module.exports = { getReviewByIdMC };
+const postReviewToProductMC = (id, rev) => {
+  return new Promise((resolve, reject) => {
+    const pqs = `INSERT INTO reviews (productid, username, date, head, body, stars, value, quality, appearance, expected, ease, helpful, unhelpful) VALUES (${rev.productid},(${rev.username},(${rev.date},(${rev.head},(${rev.body},(${rev.stars},(${rev.value},(${rev.quality},(${rev.appearance},(${rev.expected},(${rev.ease},(${rev.helpful},(${rev.unhelpful},)`;
+    client.query(pqs)
+      .then(data => resolve(data))
+      .catch(err => reject(err));
+  });
+};
+
+module.exports = { getReviewByIdMC, postReviewToProductMC };

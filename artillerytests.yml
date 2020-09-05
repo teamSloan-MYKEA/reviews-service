@@ -1,9 +1,19 @@
 config:
-  target: http://localhost:3002
+  target: "http://localhost:3002"
   phases:
-    - duration: 60
-      arrivalRate: 1000
+    - duration: 30
+      arrivalCount: 10
+      name: Warm up
+    - duration: 30
+      arrivalCount: 100
+      name: Ramp up load
+    - duration: 300
+      arrivalCount: 1000
+      name: Sustained load
+
+
 scenarios:
-  - flow:
+  - name: "GET"
+    flow:
       - get:
-          url: "/900"
+          url: "/1/reviews/{{$randomNumber(1,1000000)}}"
